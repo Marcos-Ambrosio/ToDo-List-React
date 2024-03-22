@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    outline: none;
+    font-weight: 500;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #ececec;
+
+}
+
+.container {
+    margin: auto;
+    max-width: 712px;
+    padding: 0 2rem;
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+form .box {
+    position: relative;
+}
+
+form input {
+    height: 4rem;
+    width: 100%;
+    padding: 0 10rem 0 1rem;
+}
+
+form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    width: 8rem;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: .4rem;
+    transition: .4s;
+    background-color: #eee;
+}
+
+form button:active {
+    background-color: #999;
+}
+
+.list-tasks {
+    margin-top: 2rem;
+}
+
+.list-tasks .task {
+    background-color: #fff;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    margin-top: .4rem;
+    transition: .4s;
+}
+
+.list-tasks .task.done {
+    background-color: hsl(120, 50%, 75%);
+    transition: .4s;
+}
+
+.list-tasks .task p {
+    word-break: keep-all;
+    width: 100%;
+    height: 3rem;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    line-height: 3rem;
+    font-size: 1.4rem;
+}
+
+.task button {
+    position: absolute;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taks button:hover {
+    opacity: .1;
+}
+
+.task .btn-done {
+    background-color: green;
+    right: 3rem;
+    color: #fff;
+}
+
+.task .btn-delete {
+    right: 0.5rem;
+    background-color: #933;
+    color: #fff;
+}
+
+
+.task.delected {
+    transition: .5s;
+    overflow-y: hidden;
+    animation: animation-delected 1s;
+}
+
+@keyframes animation-delected {
+    10% {
+        background-color: rgb(211, 43, 43);
+        color: #eee;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        height: 0px;
+    }
+
+}
