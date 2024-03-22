@@ -1,13 +1,16 @@
 {
+  "homepage": "https://Marcos-Ambrosio.github.io/ToDo-List-React",
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "backend" : "json-server --watch db.json --port 5000",
+    "backend": "json-server --watch db.json --port 5000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "json-server": "^0.17.3",
